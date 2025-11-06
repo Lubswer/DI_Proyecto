@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/esfot.css">
+</head>
+
+<body>
+  <header>
+    <div class="navegasion">
+      <ul class="iconos">
+        <li class="iconos-texto"><img src="imagenes/logoEsfot.png" alt=""></li>
+        <li><img src="imagenes/logoEsfot.png" alt=""><span>Facultades</span></li>
+        <li><img src="imagenes/logoEsfot.png" alt=""><span>Perfil</span></li>
+        <li><img src="imagenes/logoEsfot.png" alt=""><span>Subir</span></li>
+        <li><img src="imagenes/logoEsfot.png" alt=""><span>Guardados</span></li>
+        <li><img src="imagenes/logoEsfot.png" alt=""><span>Configuracion</span></li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <div class="documentos">
+      <article class="post">
+        <p class="autor">UsuarioA</p>
+        <img src="" alt="">
+        <p>¡Miren mi foto!</p>
+      </article>
+      <article class="post">
+        <p class="autor">UsuarioA</p>
+        <img src="" alt="">
+        <p>¡Miren mi foto!</p>
+      </article>
+      <article class="post">
+        <p class="autor">UsuarioA</p>
+        <img src="" alt="">
+        <p>¡Miren mi foto!</p>
+      </article>
+      <article class="post">
+        <p class="autor">UsuarioA</p>
+        <img src="" alt="">
+        <p>¡Miren mi foto!</p>
+      </article>
+      <article class="post">
+        <p class="autor">UsuarioA</p>
+        <img src="" alt="">
+        <p>¡Miren mi foto!</p>
+      </article>
+      <article class="post">
+        <p class="autor">UsuarioA</p>
+        <img src="" alt="">
+        <p>¡Miren mi foto!</p>
+      </article>
+      <article class="post">
+        <p class="autor">UsuarioA</p>
+        <img src="" alt="">
+        <p>¡Miren mi foto!</p>
+      </article>
+      <article class="post">
+        <p class="autor">UsuarioA</p>
+        <img src="" alt="">
+        <p>¡Miren mi foto!</p>
+      </article>
+      <article class="post">
+        <p class="autor">UsuarioA</p>
+        <img src="" alt="">
+        <p>¡Miren mi foto!</p>
+      </article>
+    </div>
+    <div class="cargar">
+      <form action="procesar-publicacion.php" method="POST" enctype="multipart/form-data">
+
+        <h3>Sube contenido</h3>
+
+        <div class="form-grupo">
+          <label for="mensaje">Descripcion del contenido:</label>
+          <textarea id="mensaje" name="texto_del_post" rows="5" placeholder="¿Qué estás pensando?"></textarea>
+        </div>
+
+        <div class="form-grupo">
+          <label for="archivo-post">Adjuntar Archivo:</label>
+          <input type="file" id="archivo-post" name="archivo_del_usuario">
+        </div>
+
+        <div class="form-grupo">
+          <button type="submit">Publicar</button>
+        </div>
+
+      </form>
+
+    </div>
+  </main>
+
+
+
+</body>
+
+</html>
