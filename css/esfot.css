@@ -2,6 +2,7 @@ body {
   background-color: rgba(0, 0, 0, 0.99);
   display:flex;
   overflow: hidden;
+
 }
 .navegasion {
   margin-left: 200px;
@@ -17,10 +18,13 @@ body {
   background-color: rgba(255, 255, 255, 0);
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 70px;
   list-style-type: none;
   padding: 0;
   margin: 0;
+  margin:0;
+  margin-left: -78px;
+  margin-top: 40px; /*Se mi invirtieron unas cosas pero sirve jajaj*/
 
 }
 .navegasion .iconos li {
@@ -34,7 +38,12 @@ body {
 .navegasion .iconos img {
   width: 35px;
   height: 45px;
-  object-fit: contain; 
+  object-fit: contain;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+.navegasion .iconos img:hover {
+  transform: scale(1.2); /* Aumenta un poco el tamaño */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Agrega sombra */
 }
 .navegasion .iconos li span {
   font-family: Arial, sans-serif;
@@ -47,11 +56,25 @@ body {
   margin-top: -9px;
   align-items: center;
   color: #ffffffe6;
-  background-color: rgba(234, 234, 234, 0);
+  background-color: rgba(0, 0, 0, 0);
   width: 650px;
   border-right: 1px solid rgb(255, 255, 255,0.3);
   overflow-y: auto;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.buscador{
+  margin-top: 20px;
+  margin-bottom: 30px;
+  background-color: #16161683;
+  color: #ffffff;
+  border: 1px solid rgb(255, 255, 255,0.3);
+  border-radius: 50px;
+  width: 400px;
+;
+
+  
 
 }
 /* 1. El ancho total de la barra de scroll */
@@ -73,11 +96,13 @@ body {
 .post{
   border-top: 1px solid rgb(255, 255, 255,0.3);
   border-bottom: 1px solid rgb(255, 255, 255,0.3);
+  width: 100%;
 
 }
 main{
   display: flex;
   background-color: rgba(255, 0, 0, 0);
+  
 }
 .cargar{
   margin-left: 65px;
@@ -109,16 +134,109 @@ main{
   flex-direction: column;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 25px;
 
 }
 .cargar textarea{
   width: 300px;
   color: #ffffff;
   height: 40px;
-  background-color: #141313;
-  border: 1px solid rgb(255, 255, 255,0.2);
-  border-radius: 10px
+  background-color: #14131300;
+  border: 1px solid rgb(255, 255, 255,1);
+  border-radius: 20px;
+  resize: none;
+
   
+}
+
+.form-grupo button{
+  background-color: #ffffff;
+  border-radius: 60px;
+  width: 100px;
+  height: 40px;
+  cursor: pointer;
+  border: 1px solid rgb(255, 255, 255);
+  color: #000000;
+  margin-top: 60px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+
+.form-grupo button:hover {
+  background-color: #000000;
+  color: #ffffff; /* Se pone de un azul más oscuro */
+  /* Añade una sombra suave para "levantarlo" */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border:none;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+}
+
+.documentos .encabezado {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  justify-content:space-between;
+  margin-top: 6px;
+}
+.info_usuario{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 15px;
+  
+}
+.info_usuario img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+
+}
+.btn_publicacion button{
+  background-color: #ffffffda;
+  width: 50px;  
+  height: 20px;
+  border: none;
+  margin-right: 15px;
+  border-radius: 16px;
+
+}
+.btn_publicacion button:hover{
+  background-color: #000000;
+  border: 1px solid rgb(255, 255, 255);
+  color: #ffffff;
+
+}
+.publicacion img{
+  width: 180px;
+  height: 180px;
+  background-color: #00000000;
+}
+.acciones button{
+ background-color: rgba(178, 34, 34, 0);
+ padding: 0;
+ cursor: pointer;
+ border: none;
+}
+.publicacion{
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.acciones img{
+  width: 29px;
+  height: 30px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.acciones img:hover {
+  /* Un resplandor blanco de 10px */
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+}
+.acciones{
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15px;
+  gap: 15px;
+  margin-bottom: 10px;
 }
 
