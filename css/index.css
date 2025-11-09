@@ -156,6 +156,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #00008b00;
+    height: 500px;
     
 }
 
@@ -246,6 +248,34 @@ body {
 
 button:hover {
   background-color: #c5c5c5;
+}
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: row;
+  background-color: #d1d1d1;
+  height: 80px;
+  gap: 13%;
+}
+.redes img{
+  width: 40px;
+  height: 40px;
+  margin: none;
+  pad: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.redes{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 60%;
+  height: 90%;
+  background-color: #00008b00;
+  gap: 40px;
+
 }
 
 /* ==================================================

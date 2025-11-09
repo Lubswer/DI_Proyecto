@@ -239,4 +239,94 @@ main{
   gap: 15px;
   margin-bottom: 10px;
 }
+/* Para que sea responsive*/
+@media (max-width: 768px) {
+
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  .navegasion {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;            /* para que la barra sea angosta*/
+    height: 100vh;
+    background-color: #000; 
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0;             
+    margin: 0;              
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    z-index: 10;
+  }
+
+  .navegasion .iconos {
+    padding: 0;
+    margin: 0;
+    gap: 40px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navegasion .iconos li {
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Para que se oculten los textos */
+  .navegasion .iconos li span {
+    display: none;
+  }
+
+  main {
+    margin-left: 60px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .buscador {
+    width: 90%;
+    max-width: 400px;
+    margin: 15px auto;
+  }
+
+  .cargar {
+    width: 90%;
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cargar form {
+    width: 100%;
+    height: auto;
+  }
+  .documentos {
+    width: 100%;
+    border-right: none;
+    overflow-y: visible;
+  }
+
+  .publicacion img {
+    width: 70%;
+    height: auto;
+  }
+}
+/*Para que la parte de subir contenido este arriba de las publicaciones */
+@media (max-width: 768px) {
+  .cargar {
+    order: 1; /* Para que aparezca primero */
+  }
+
+  .documentos {
+    order: 2; /* Para que aparexca despues */
+  }
+}
+
 
