@@ -306,10 +306,14 @@ main {
 
   }
   .navegasion{
-    order: 1;
+   
     width: 15%;
-    margin: 0;
+    border-bottom-right-radius: 78px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
   main{
     display: flex;
     flex-direction: column;
@@ -319,13 +323,29 @@ main {
   }
   .cargar{
     order: -1;
+    margin-top: 30px;
+  }
+  .cargar form{
+ 
     margin: 0;
     pad: 0;
+    width: 73%;
+  }
+  .form-grupo label{
+    display: flex;
+  }
+  .form-grupo input{
+    width: 100%;
   }
 
   header span{
     display: none;
   }
+ 
+  .documentos{
+    width: 76%;
+  }
+
 
 }
 

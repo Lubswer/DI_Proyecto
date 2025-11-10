@@ -338,7 +338,7 @@ footer span{
 
 /* Celulares */
 @media (max-width: 768px) {
-  /* Navbar */
+
   .navbar {
     flex-wrap: wrap;
     padding: 10px;
