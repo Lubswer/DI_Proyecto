@@ -47,15 +47,19 @@ header{
 .foto{
     width: 100%;
     height: 35%;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-header img{
-    width: 50%;
-    height: 90%;
-    margin: auto;
+header i{
+    color: rgb(255, 252, 252);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: 4px solid #393a3cc2;
-     
 }
 .datos{
     background-color: rgba(227, 0, 0, 0);
@@ -204,6 +208,12 @@ header img{
     height: 40px;
     border-radius: 50%;
 }
+.encabezado i{
+    color: rgb(255, 252, 252);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .publicacion{
     display: flex;
     flex-direction: column;
@@ -216,6 +226,13 @@ header img{
     width: 40%;
     margin: auto;
 }
+.publicacion i{
+    color: rgb(255, 252, 252);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .acciones{
     display: flex;
     justify-content: start;
@@ -227,10 +244,16 @@ header img{
     background-color: rgba(240, 248, 255, 0);
     filter: invert(36%) sepia(93%) saturate(7484%) hue-rotate(247deg) brightness(95%) contrast(94%);
 }
+.acciones i{
+    color: rgb(255, 252, 252);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .acciones button{
     background-color: rgba(240, 248, 255, 0);
     border: none;
-    margin-left: 23px;
+    margin-left: 40px;
     margin-bottom: 3px;
     cursor: pointer;
 }
