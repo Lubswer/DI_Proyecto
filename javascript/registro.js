@@ -17,7 +17,8 @@ formRegistro.addEventListener("submit", function(e) { e.preventDefault();
     icon: 'warning',
     title: 'Campos incompletos',
     text: 'Todos los campos son obligatorios',
-    timer: 100
+    timer: 1000,
+    showConfirmButton: false
     });
     return;
     }
@@ -26,7 +27,8 @@ formRegistro.addEventListener("submit", function(e) { e.preventDefault();
     icon: 'error',
     title: 'Contraseña incorrecta',
     text: 'Las contraseñas no coinciden',
-    timer: 10
+    timer: 1000,
+    showConfirmButton: false
     });
     return;
     }
