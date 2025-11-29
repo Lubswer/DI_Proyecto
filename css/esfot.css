@@ -216,10 +216,13 @@ main {
   transform: scale(1.15);
 }
 
-.acciones img {
-  width: 28px;
-  height: 28px;
-  filter: invert(36%) sepia(93%) saturate(7484%) hue-rotate(247deg) brightness(95%) contrast(94%);
+.acciones i {
+  font-size: 30px;   /* más grande */
+  color: #ffffff;    /* blanco */
+}
+.info_usuario i {
+  font-size: 35px;   /* icono usuario más grande */
+  color: #ffffff;
 }
 
 
@@ -292,6 +295,28 @@ main {
   color: #000;
   transform: scale(1.05);
 }
+.item-menu {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  height: 100%;
+  padding: 10px 25px;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 8px;
+}
+
+.navegasion .iconos li {
+  padding: 0;  /* Quitar padding del LI */
+  
+}
+
+.navegasion .iconos i {
+  font-size: 32px;   /* tamaño recomendado */
+  color: #fff;
+}
+
 
 /* ==================================================
    RESPONSIVE

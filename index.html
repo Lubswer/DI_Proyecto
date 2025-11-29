@@ -1,80 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALU | Plataforma de aprendizaje</title>
     
-    <title>ALU - Plataforma de aprendizaje</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <!-- Barra de navegación -->
-    <header class="navbar">
-        <div class="logo">ALU</div>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="facultades.html">Material</a>
-            <a href="#loginid">Iniciar sesión</a>
-            <button class="btn-registro"><a href="registro.html">Regístrate</a></button>
+
+    <header class="barra-navegacion">
+        <div class="logo">
+            <i class="fa-solid fa-building-columns"></i> ALU
+        </div>
+        
+        <nav class="menu">
+            <a href="#tutorial">TUTORIAL</a>
+            <a href="#seccion-login">Login</a>
+            <a href="registro.html" class="boton-menu">Regístrate</a>
         </nav>
     </header>
 
-    <!-- Banner principal -->
-    <section class="banner">
-        <div class="imagen"><img src="imagenes/libros.png" alt=""></div>
+    <section class="portada">
+        <h1>COMPARTE Y BUSCA <br>ALU</h1>
+        <p>Tu espacio digital para aprender, conectar y colaborar.</p>
+        
+        <a href="registro.html">
+            <button class="boton-principal">Comienza Ahora</button>
+        </a>
     </section>
 
-    <!-- Sección de características -->
-    <section class="ofrecer">
-        <h2>Descubre lo que ALU tiene para ofrecer</h2>
-        <p>Nuestra plataforma está diseñada para facilitar tu aprendizaje y colaboración con otros estudiantes.</p>
-        <div class="features">
-            <div class="feature">Amplia biblioteca de recursos</div>
-            <div class="feature">Comunidad activa de estudiantes</div>
-            <div class="feature">Foros de discusión actualizados</div>
+    <section class="contenedores-info">
+        
+        <div class="tarjeta">
+            <div class="icono-tarjeta">
+                <i class="fa-solid fa-book"></i>
+            </div>
+            <h3>CONTENIDO</h3>
+            <p>Recursos seleccionados por facultad.</p>
+        </div>
+
+        <div class="tarjeta">
+            <div class="icono-tarjeta">
+                <i class="fa-solid fa-users"></i>
+            </div>
+            <h3>COMUNIDAD</h3>
+            <p>Conecta con estudiantes de todas las facultades.</p>
+        </div>
+
+        <div class="tarjeta">
+            <div class="icono-tarjeta">
+                <i class="fa-solid fa-comments"></i>
+            </div>
+            <h3>CHAT</h3>
+            <p>Chatea con estudiantes que comparten tus intereses.</p>
+        </div>
+
+    </section>
+
+    <section class="seccion-video" id ="tutorial">
+        <div class="conocenos"><p class="titulo-pequeno">CONOCENOS AQUI</p> </div>
+        
+        <div class="marco-video">
+             <iframe src="https://www.youtube.com/embed/GtL1huin9EE?si=mcwBg4X3QGDbH_pP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </section>
 
-    <!-- Tutorial -->
-    <section class="tutorial">
-        <h2>Tutorial Guia</h2>
-        <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/GtL1huin9EE?si=mcwBg4X3QGDbH_pP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-``
-        </div>
-    </section>
-
-    <!-- Registro -->
-    <section class="registro">
-        <h2>Únete a ALU hoy mismo</h2>
-        <p>Regístrate gratis y comienza a aprovechar todos los recursos y herramientas que tenemos para ti.</p>
-        <a href="registro.html"><button class="btn-comenzar">Comienza ahora</button></a>
-    </section>
-
-    <!-- Iniciar sesión -->
-    <section class="login" >  
-        <img src="imagenes/banner.png" alt="">
-        <div class="login-box" >
-            <h2>Iniciar Sesión</h2>
-            <form id = "loginid" >
-                <label>Email/usuario</label>
-                <input type="text" placeholder="">
-                <label>Contraseña</label>
-                <input type="password" placeholder="">
-                <div class="recordar">
-                    <label>Recordar usuario</label>
-                    <input type="checkbox" class="check" >
+    <footer id="seccion-login">
+        
+        <div class="contenedor-footer">
+            
+            <div class="columna-izquierda">
+                <h2>UNETE<br>AHORA</h2>
+                <p>Siguenos en nustras redes sociales o al correo: contacto@alu.edu</p>
+                
+                <div class="redes-sociales">
+                    <a href="https://wa.me/qr/MWBE5A3S7EU7P1" target="_blank" class="boton-social">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://x.com/lubswer" target="_blank" class="boton-social">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/lubswer/" target="_blank" class="boton-social">
+                        <i class="fab fa-instagram"></i>
+                    </a>
                 </div>
-                <button type="submit" class="btn-login">Iniciar sesión</button>
-                <p class="registro-texto">¿No tienes una cuenta? <a href="registro.html">Registrarse</a></p>
-            </form>
+            </div>
+
+            <div class="columna-derecha">
+                <div class="cuadro-login" id="cuadro-login">
+                    <h3>ACCESO ESTUDIANTES</h3>
+                    
+                    <form id = "formLogin">
+                        <input type="text" placeholder="Correo electrónico" class="entrada-texto" id = "logEmail">
+                        <input type="password" placeholder="Contraseña" class="entrada-texto" id = "logPassword">
+
+                        <div class="opcion-recordar">
+                            <input type="checkbox"> Recordar usuario
+                        </div>
+
+                       <button type="submit" class="boton-ingresar">INGRESAR </button>
+                        
+                        <p class="texto-registro">
+                            ¿No tienes cuenta? <a href="registro.html">Regístrate</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+
         </div>
-    </section>
-    <footer>
-        <span>ALU © 2025. Todos los derechos reservados.</span>
-        <div class = "redes">
-        <div><a href="https://www.instagram.com/lubswer/"><img src="imagenes/instagram.png" alt=""></a></div>
-        <div><a href="https://wa.me/qr/MWBE5A3S7EU7P1"><img src="imagenes/whatsapp.png" alt=""></a></div>
-        <div><a href="https://x.com/lubswer"><img src="imagenes/gorjeo.png" alt=""></a></div>
+        
+        <div class="pie-copyright">
+            ALU © 2025. Todos los derechos reservados.
         </div>
+
     </footer>
+<script src="JS/index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>
