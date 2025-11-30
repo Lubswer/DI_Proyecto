@@ -36,7 +36,21 @@ formRegistro.addEventListener("submit", function(e) { e.preventDefault();
     nombres: datos.nombres,
     email: datos.email,
     usuario: datos.usuario,
-    password: datos.password
+    password: datos.password,
+        // CAMPOS EXTRA DEL PERFIL
+    frase: "",
+    edad: "",
+    carrera: "",
+    semestre: "",
+    enseñar1: "",
+    enseñar2: "",
+    aprender1: "",
+    aprender2: "",
+    proyecto1: "",
+    proyecto2: "",
+    proyecto3: "",
+    proyecto4: "",
+    foto: ""
     };
     localStorage.setItem("datosUsuario", JSON.stringify(datosAGuardar));
     
