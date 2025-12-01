@@ -6,7 +6,7 @@ if (!usuario) {
     window.location.href = "index.html#cuadro-login";
 } else {
     // 3. Insertar datos en el perfil
-    document.getElementById("nombrePerfil").textContent = usuario.nombres;
-    document.getElementById("correoPerfil").textContent = usuario.email;
+    document.getElementById("nombres").textContent = usuario.nombres;
+    document.getElementById("emailPerfil").textContent = usuario.email;
 }
 
