@@ -338,7 +338,12 @@ footer {
 
 /* 8. ADAPTABILIDAD (CELULAR) */
 @media (max-width: 768px) {
-    
+    .menu{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+    }
     .portada h1 {
         font-size: 50px; /* Texto más pequeño */
     }
