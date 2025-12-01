@@ -25,13 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-function crearNuevoPostDOM(descripcion, nombreArchivo) {
+function crearNuevoPostDOM(descripcion, nombreArchivo, usuario, fotoPerfil) {
     const nuevoPostHTML = `
         <article class="post">
             <div class="encabezado">
                 <div class="info_usuario">
-                    <i class="fa-solid fa-circle-user"></i>
-                    <p>Usuario Actual</p>
+                    <img id="fotoPerfil" src= ${fotoPerfil} class="perfil-foto-mini">
+                    <p id = "usuario">${usuario}</p>
                     <p>${new Date().toLocaleDateString('es-ES')}</p>
                 </div>
                 <div class="btn_publicacion">
@@ -40,7 +40,6 @@ function crearNuevoPostDOM(descripcion, nombreArchivo) {
             </div>
             <div class="publicacion">
                 <p>${descripcion}</p>
-                <i class="fa-regular fa-folder" style="font-size: 200px ; align-self: center;"></i>
                 <small>Archivo: ${nombreArchivo}</small>
             </div>
             <div class="acciones">
@@ -83,7 +82,7 @@ function manejarPublicacionDOM(event) {
         return;
     }
 
-    const nuevoPostElemento = crearNuevoPostDOM(mensaje, archivo.name);
+    const nuevoPostElemento = crearNuevoPostDOM(mensaje, archivo.name, usuario.usuario, usuario.foto);
     
     const primerPostExistente = contenedorDocumentos.querySelector('.post:first-of-type');
 
@@ -102,3 +101,9 @@ function manejarPublicacionDOM(event) {
     });
     event.target.reset();
 }
+
+document.getElementById("usuario").textContent = usuario.usuario || "Nombre Usuario";
+document.querySelectorAll('[id = "fotoPerfil"]').forEach(el => {
+    el.src = usuario.foto;
+});
+
