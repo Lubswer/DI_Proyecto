@@ -338,9 +338,6 @@ footer {
 
 /* 8. ADAPTABILIDAD (CELULAR) */
 @media (max-width: 768px) {
-    .barra-navegacion .menu {
-        display: none; /* Ocultar menú en celular por simplicidad */
-    }
     
     .portada h1 {
         font-size: 50px; /* Texto más pequeño */
