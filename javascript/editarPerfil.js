@@ -1,3 +1,17 @@
+document.querySelectorAll('[id = "fotoPerfil"]').forEach(el => {
+    el.src = usuario.foto;
+});
+
+
+document.getElementById("edadPerfil").textContent = "Edad: " + (usuario.edad || "") + " años";
+document.getElementById("semestrePerfil").textContent = "Semestre: " + (usuario.semestre || "");
+document.getElementById("carreraPerfil").textContent = "Carrera: " + (usuario.carrera || "");
+document.getElementById("frasePerfil").textContent = usuario.frase;
+document.querySelectorAll('[id="usuario"]').forEach(el => {el.textContent = usuario.usuario;});
+document.getElementById("emailPerfil").textContent = usuario.email; 
+document.getElementById("nombres").textContent = usuario.nombres;
+
+
 document.getElementById("editFoto").addEventListener("change", (e) => {
     const archivo = e.target.files[0];
     if (!archivo) return;
@@ -9,6 +23,7 @@ document.getElementById("editFoto").addEventListener("change", (e) => {
 document.getElementById("btnEditarPerfil").addEventListener("click", () => {
     document.getElementById("modalEditar").style.display = "flex";
     const usuario = JSON.parse(localStorage.getItem("datosUsuario"));
+    document.getElementById("editNombres").value = usuario.nombres || "";
     document.getElementById("editNombre").value = usuario.usuario || "";
     document.getElementById("editFrase").value = usuario.frase || "";
     document.getElementById("editEdad").value = usuario.edad || "";
