@@ -1,109 +1,118 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const buscador = document.getElementById('buscador_id');
+<!DOCTYPE html>
+<html lang="en">
 
-    if (buscador) {
-        buscador.addEventListener('input', function() {
-            const query = this.value.toLowerCase().trim();
-            
-            const posts = document.querySelectorAll('.documentos .post');
-            
-            posts.forEach(post => {
-                const postDescription = post.querySelector('.publicacion p').textContent.toLowerCase();
-                
-                if (postDescription.includes(query) || query.length === 0) {
-                    post.style.display = 'block';
-                } else {
-                    post.style.display = 'none';
-                }
-            });
-        });
-    }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/esfot.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
 
-    const formPublicacion = document.querySelector('.cargar form');
-    if (formPublicacion) {
-        formPublicacion.addEventListener('submit', manejarPublicacionDOM);
-    }
-});
+<body>
+  <header>
+    <div class="navegasion">
+<ul class="iconos">
+          <li>
+            <a class="item-menu" href="index.html">
+              <i class="fa-solid fa-building-columns"></i>
+              <span>ALU</span>
+            </a>
+          </li>
 
-function crearNuevoPostDOM(descripcion, nombreArchivo, usuario, fotoPerfil) {
-    const nuevoPostHTML = `
-        <article class="post">
-            <div class="encabezado">
-                <div class="info_usuario">
-                    <img id="fotoPerfil" src= ${fotoPerfil} class="perfil-foto-mini">
-                    <p id = "usuario">${usuario}</p>
-                    <p>${new Date().toLocaleDateString('es-ES')}</p>
-                </div>
-                <div class="btn_publicacion">
-                    <button> ... </button>
-                </div>
-            </div>
-            <div class="publicacion">
-                <p>${descripcion}</p>
-                <small>Archivo: ${nombreArchivo}</small>
-            </div>
-            <div class="acciones">
-                <button><i class="fa-solid fa-download"></i></button>
-                <button><i class="fa-solid fa-bookmark"></i></button>
-            </div>
-        </article>
-    `;
-    
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = nuevoPostHTML.trim();
-    return tempDiv.firstChild;
-}
+          <li>
+            <a class="item-menu" href="facultades.html">
+              <i class="fa-solid fa-house"></i>
+              <span>Facultades</span>
+            </a>
+          </li>
 
-function manejarPublicacionDOM(event) {
-    event.preventDefault(); 
+          <li>
+            <a class="item-menu" href="perfil.html">
+              <i class="fa-solid fa-user"></i>
+              <span>Perfil</span>
+            </a>
+          </li>
 
-    const mensaje = document.getElementById('mensaje').value.trim();
-    const archivoInput = document.getElementById('archivo-post');
-    const archivo = archivoInput.files[0];
-    const contenedorDocumentos = document.querySelector('.documentos');
+          <li>
+            <a class="item-menu" href="#">
+              <i class="fa-solid fa-file-arrow-up"></i>
+              <span>Subir</span>
+            </a>
+          </li>
 
-    if (mensaje.length < 10) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Error de Publicación',
-            text: 'La descripción debe tener al menos 10 caracteres.',
-            confirmButtonColor: '#3085d6'
-        });
-        return;
-    }
+          <li>
+            <a class="item-menu" href="#">
+              <i class="fa-solid fa-bookmark"></i>
+              <span>Guardados</span>
+            </a>
+          </li>
 
-    if (!archivo) {
-        Swal.fire({
-            icon: 'error',
-            title: 'Error de Publicación',
-            text: 'Debes adjuntar un archivo para publicar.',
-            confirmButtonColor: '#3085d6'
-        });
-        return;
-    }
+          <li>
+            <a class="item-menu" href="#">
+              <i class="fa-solid fa-gear"></i>
+              <span>Configuración</span>
+            </a>
+          </li>
+        </ul>
+    </div>
+  </header>
+  <main>
+    <div class="documentos">
+      <input type="search" class="buscador" name="buscador" id="buscador_id" placeholder="Buscar">
 
-    const nuevoPostElemento = crearNuevoPostDOM(mensaje, archivo.name, usuario.usuario, usuario.foto);
-    
-    const primerPostExistente = contenedorDocumentos.querySelector('.post:first-of-type');
+      <article class="post">
+        <div class="encabezado">
+          <div class="info_usuario">
+            <img id="fotoPerfil" src="imagenes/logoEsfot.png" class="perfil-foto-mini">
+            <p id = "usuario">Nombre Usuario</p>
+            <p>Fecha</p>
+          </div>
+          <div class="btn_publicacion">
+            <button> ... </button>
+          </div>
+        </div>
+        <div class="publicacion">
+          <p>Descripcion del contenido</p>
+          <img src="imagenes/publicacion_icon.png" alt="">
+        </div>
+        <div class="acciones">
+          <button><i class="fa-solid fa-download"></i></button>
+          <button><i class="fa-solid fa-bookmark"></i></button>
+        </div>
+      </article>
+      
+     
+    </div>
+    <div class="cargar">
+      <form action="procesar-publicacion.php" method="POST" enctype="multipart/form-data">
 
-    if (primerPostExistente) {
-        contenedorDocumentos.insertBefore(nuevoPostElemento, primerPostExistente);
-    } else {
-        const buscador = document.getElementById('buscador_id');
-        buscador.after(nuevoPostElemento); 
-    }
-    
-    Swal.fire({
-        icon: 'success',
-        title: '¡Publicación Exitosa!',
-        text: 'Tu contenido ha sido añadido a la página (visible localmente).',
-        confirmButtonColor: '#3085d6'
-    });
-    event.target.reset();
-}
+        <h3>Sube contenido</h3>
 
-document.getElementById("usuario").textContent = usuario.usuario || "Nombre Usuario";
-document.querySelectorAll('[id = "fotoPerfil"]').forEach(el => {
-    el.src = usuario.foto;
-});
+        <div class="form-grupo">
+          <label for="mensaje">Descripcion del contenido:</label>
+          <textarea id="mensaje" name="texto_del_post" rows="5" placeholder="¿Qué estás pensando?"></textarea>
+        </div>
 
+        <div class="form-grupo">
+          <label for="archivo-post">Adjuntar Archivo:</label>
+          <input type="file" id="archivo-post" name="archivo_del_usuario">
+        </div>
+
+        <div class="form-grupo">
+          <button class="boton" type="">Publicar</button>
+        </div>
+
+      </form>
+
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+  <script src="javascript/perfil.js"></script>
+  <script src="javascript/esfot.js"></script>
+  <script src = "javascript/editarPerfil.js"></script>
+
+
+</body>
+
+</html>
